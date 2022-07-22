@@ -1,0 +1,13 @@
+server:
+  port: 8082
+
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    username: admin
+    password: admin
+    port: 5672
+    listener:
+      simple:
+        # 为了保证信息能够被正确消费,建议签收模式设置为手工签收,并在代码中实现手工签收
+        acknowledge-mode: manual
